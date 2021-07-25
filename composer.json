@@ -23,5 +23,8 @@
             "email": "contact@jaschavanaalst.nl"
         }
     ],
+	"bin": [
+		"bin/wp-ver"
+	],
     "minimum-stability": "stable"
 }
