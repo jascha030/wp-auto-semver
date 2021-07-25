@@ -1,8 +1,18 @@
 #!/usr/bin/env php
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
+use Symfony\Component\Console\Application;
 
-$loader = include dirname(__FILE__, 2) . '/includes/loader.php';
-require_once $loader(dirname(__FILE__, 2));
+$rootDir = dirname(__FILE__, 2);
+$loader  = include "{$rootDir}/includes/loader.php";
 
+require_once $loader($rootDir);
+
+$app = new Application('1.0.0', 'WP Auto Semantic Versioning');
+
+try {
+    $app->run();
+} catch (\Exception $e) {
+    print $e->getMessage();
+    exit($e->getCode());
+}
