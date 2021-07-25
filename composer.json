@@ -17,6 +17,11 @@
             "Jascha030\\WpAutoSemver\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Jascha030\\WpAutoSemver\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Jascha030",
