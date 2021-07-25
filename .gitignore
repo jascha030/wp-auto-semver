@@ -1,0 +1,17 @@
+# Gitignore
+#
+## Composer
+/vendor/
+
+## Php-CS / PhpUnit
+/**/*.*.cache
+*.*.cache
+**.cache
+
+## Mac
+**.DS_Store
+.DS_Store
+
+## Jetbrains
+/.idea/
+
