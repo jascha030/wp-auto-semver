@@ -31,5 +31,9 @@
 	"bin": [
 		"bin/wp-ver"
 	],
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "scripts": {
+        "phpunit": "vendor/bin/phpunit",
+        "format": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php"
+    }
 }
