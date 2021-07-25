@@ -25,4 +25,3 @@ return static function () {
 
     throw new \RuntimeException($errorMsg);
 };
-
