@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+$loader = include dirname(__FILE__, 2) . '/includes/loader.php';
+require_once $loader(dirname(__FILE__, 2));
+
