@@ -7,16 +7,31 @@ use PHPUnit\Framework\TestCase;
 
 class FinderTest extends TestCase
 {
-    public function testGetFinder(): void
+    public function testCreate(): Finder
     {
-        // Get instance
-        $clonedInstance = Finder::create()->getFinder();
+        $instance = Finder::create();
+
+        self::assertInstanceOf(Finder::class, $instance);
+
+        return $instance;
+    }
+
+    /**
+     * @depends testCreate
+     */
+    public function testGetFinder(Finder $instance): void
+    {
+        // Get cloned symfony finder instance
+        $clonedInstance = $instance->getFinder();
 
         // Quite useless due to return type, but nonetheless.
         self::assertInstanceOf(
             \Symfony\Component\Finder\Finder::class,
             $clonedInstance
         );
+
+        // Triple check...
+        self::assertIsIterable($clonedInstance);
 
         // Test if cloned instance is equal to instance when called again
         self::assertEquals($clonedInstance, Finder::create()->getFinder());
@@ -30,12 +45,15 @@ class FinderTest extends TestCase
             Finder::create()->getFinder()->getIterator()
         );
     }
-    //
-    // public function testToArray(): void
-    // {
-    // }
-    //
-    // public function testCreate(): void
-    // {
-    // }
+
+    /**
+     * @depends testCreate
+     */
+    public function testToArray(Finder $instance): void
+    {
+        self::assertEquals(
+            iterator_to_array($instance->getFinder()),
+            Finder::create()->toArray()
+        );
+    }
 }
