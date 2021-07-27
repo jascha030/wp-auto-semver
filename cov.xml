@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1627426779">
+  <project timestamp="1627426779">
+    <file name="/Users/jascha030/.development/Projects/Composer/Console/wp-auto-semver/src/Finder/Finder.php">
+      <class name="Jascha030\WpAutoSemver\Finder\Finder" namespace="global">
+        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
+      </class>
+      <line num="9" type="method" name="__construct" visibility="private" complexity="1" crap="1" count="3"/>
+      <line num="11" type="stmt" count="3"/>
+      <line num="12" type="stmt" count="3"/>
+      <line num="13" type="stmt" count="3"/>
+      <line num="14" type="stmt" count="3"/>
+      <line num="15" type="stmt" count="3"/>
+      <line num="16" type="stmt" count="3"/>
+      <line num="18" type="method" name="create" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="20" type="stmt" count="3"/>
+      <line num="27" type="method" name="getFinder" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="29" type="stmt" count="2"/>
+      <line num="32" type="method" name="toArray" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="34" type="stmt" count="1"/>
+      <metrics loc="36" ncloc="32" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
+    </file>
+    <metrics files="1" loc="36" ncloc="32" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
+  </project>
+</coverage>
